@@ -1,0 +1,39 @@
+<div class="container">
+
+    <h2>User Validation</h2>
+  
+  
+    <!-- Username Input -->
+  
+    <div class="form-group">
+  
+      <label>Username:</label>
+  
+      <input type="text" class="form-control" [(ngModel)]="username" (blur)="validateUsername()">
+  
+      <p [ngClass]="{'valid': usernameMessage.includes('✅'), 'invalid': usernameMessage.includes('❌')}">
+  
+        {{ usernameMessage }}
+  
+      </p>
+  
+    </div>
+  
+  
+    <!-- Password Input -->
+  
+    <div class="form-group">
+  
+      <label>Password:</label>
+  
+      <input type="password" class="form-control" [(ngModel)]="password" (blur)="validatePassword()">
+  
+      <p [ngClass]="{'valid': passwordMessage.includes('✅'), 'invalid': passwordMessage.includes('❌')}">
+  
+        {{ passwordMessage }}
+  
+      </p>
+  
+    </div>
+  
+  </div>
